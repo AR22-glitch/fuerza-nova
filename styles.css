@@ -1,0 +1,650 @@
+/* VARIABLES DE SPORT STYLE */
+:root {
+    --color-fondo: #111111;
+    --color-tarjetas: #1d1d1d;
+    --color-naranja: #ff6b00;
+    --color-blanco: #ffffff;
+    --color-texto: #bdbdbd;
+}
+/* Configuración general de la página */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colores y apariencia del sitio */
+
+body {
+    background-color: #111111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+/* ENCABEZADO PRINCIPAL */
+
+.encabezado {
+    background-color: #080808;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* LOGOTIPO */
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff6b00;
+}
+/* MENÚ DE NAVEGACIÓN */
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff6b00;
+}
+/* BANNER PRINCIPAL */
+
+.banner {
+    min-height: 500px;
+    padding: 60px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    background: linear-gradient(90deg, #111111, #252525);
+}
+
+/* TEXTO DEL BANNER */
+
+.banner-texto {
+    max-width: 550px;
+}
+
+.subtitulo {
+    color: #ff6b00;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.banner h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.banner-texto p {
+    line-height: 1.6;
+}
+
+/* IMAGEN DEL BANNER */
+
+.banner-imagen {
+    width: 50%;
+}
+
+.banner-imagen img {
+    width: 100%;
+    border-radius: 15px;
+}
+/* BOTÓN PRINCIPAL */
+
+.boton {
+    display: inline-block;
+
+    background-color: #ff6b00;
+    color: white;
+
+    padding: 15px 30px;
+    margin-top: 25px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.boton:hover {
+    background-color: white;
+    color: #111111;
+}
+/* SECCIÓN DE CATEGORÍAS */
+.categorias {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.categorias h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* CONTENEDOR DE LAS TARJETAS */
+.contenedor-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* TARJETAS INDIVIDUALES */
+.categoria {
+   background-color: var(--color-tarjetas);
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.categoria:hover {
+    transform: translateY(-8px);
+}
+
+.categoria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.categoria h3 {
+    margin: 15px 0;
+}
+
+.categoria a {
+    --color-naranja: #ff6b00;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* PIE DE PAGINA */
+
+.pie-pagina {
+    background-color: #080808;
+
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: var(--color-texto);
+}
+/* DISEÑO PARA TABLETS */
+
+@media (max-width: 1024px) {
+
+    .banner h1 {
+        font-size: 45px;
+    }
+
+    .contenedor-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 767px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-imagen {
+        width: 100%;
+    }
+
+    .banner h1 {
+        font-size: 35px;
+    }
+
+    .contenedor-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .pie-pagina {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+}
+/* =================================
+   PAGINA DE PRODUCTOS
+================================= */
+
+/* CONTENEDOR DEL CATALOGO */
+
+.catalogo {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.catalogo > h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #ff6b00;
+}
+
+.catalogo > p {
+    color: #bdbdbd;
+    margin-bottom: 50px;
+}
+
+/* CATEGORIAS DE PRODUCTOS */
+
+.categoria-productos {
+    margin-bottom: 60px;
+}
+
+.categoria-productos h2 {
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid #ff6b00;
+    padding-left: 15px;
+}
+
+/* TARJETAS DE PRODUCTOS */
+
+.producto {
+    background-color: #1d1d1d;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 350px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+}
+
+.producto img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    margin: 15px 0;
+}
+
+.producto p {
+    color: #bdbdbd;
+    line-height: 1.5;
+}
+
+.producto .precio {
+    color: #ff6b00;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* =================================
+   PAGINA DE SERVICIOS
+================================= */
+
+.servicios {
+    padding: 60px 8%;
+}
+
+.titulo-servicios {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-servicios > p:first-child {
+    color: #ff6b00;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-servicios h1 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.titulo-servicios > p:last-child {
+    color: #bdbdbd;
+}
+
+/* CONTENEDOR DE SERVICIOS */
+
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* TARJETAS */
+
+.tarjeta-servicio {
+    background-color: #1d1d1d;
+    padding: 30px;
+    border-radius: 12px;
+    border-bottom: 4px solid #ff6b00;
+    transition: 0.3s;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta-servicio h2 {
+    color: #ff6b00;
+    font-size: 35px;
+}
+
+.tarjeta-servicio h3 {
+    margin: 15px 0;
+}
+
+.tarjeta-servicio p {
+    color: #bdbdbd;
+    line-height: 1.6;
+}
+
+/* MENSAJE FINAL */
+
+.mensaje-servicios {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #252525;
+    border-radius: 12px;
+}
+
+.mensaje-servicios h2 {
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+    .contenedor-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-servicios h1 {
+        font-size: 30px;
+    }
+}
+
+/* =================================
+   PAGINA DE CONTACTO
+================================= */
+
+.contacto {
+    padding: 60px 8%;
+}
+
+.titulo-contacto {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-contacto > p:first-child {
+    color: #ff6b00;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-contacto h1 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.titulo-contacto > p:last-child {
+    color: #bdbdbd;
+}
+
+/* FORMULARIO */
+
+.formulario {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    background-color: #1d1d1d;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 13px;
+    background-color: #292929;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid #ff6b00;
+}
+
+/* BOTON DEL FORMULARIO */
+
+.formulario button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+    .contacto {
+        padding: 40px 5%;
+    }
+
+    .titulo-contacto h1 {
+        font-size: 30px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+}
+/* AJUSTES GENERALES RESPONSIVE */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+}
+/* MENU HAMBURGUESA */
+
+.menu-toggle {
+    display: none;
+    background: var(--color-naranja);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .encabezado {
+        position: relative;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.menu-activo {
+        display: flex;
+    }
+
+}
+
+/* =====================================
+   REDISEÑO PROFESIONAL DEL FORMULARIO
+===================================== */
+
+.contacto {
+    padding: 60px 20px 80px;
+}
+
+.titulo-contacto {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+
+    background: #1d1d1d;
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    box-sizing: border-box;
+}
+
+.formulario label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    background: #292929;
+    color: white;
+
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-naranja);
+    box-shadow: 0 0 5px var(--color-naranja);
+}
+
+.formulario textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--color-naranja);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background: #e65f00;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+    .formulario {
+        padding: 20px;
+    }
+
+    .contacto {
+        padding: 40px 15px;
+    }
+}

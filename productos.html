@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Style | Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="index.html" class="logo">SPORT<span>STYLE</span></a>
+
+       <button class="menu-toggle" id="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false">
+    ☰
+</button>
+
+<nav class="menu" id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="carrito.html">Mi carrito</a>
+</nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="catalogo">
+            <h1>NUESTROS PRODUCTOS</h1>
+            <p>Encuentra el equipo ideal para superar tus límites.</p>
+
+            <!-- CATEGORÍA DE ROPA -->
+            <section id="ropa" class="categoria-productos">
+                <h2>ROPA DEPORTIVA</h2>
+
+                <article class="producto">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                         alt="Playera deportiva">
+
+                    <h3>Playera deportiva</h3>
+                    <p>Prenda cómoda para tus entrenamientos.</p>
+                    <p class="precio">$299 MXN</p>
+                    <button class="agregar-carrito"
+        data-nombre="Playera deportiva"
+        data-precio="299">
+    Agregar al carrito
+</button>
+                </article>
+            </section>
+
+            <!-- CATEGORÍA DE CALZADO -->
+            <section id="calzado" class="categoria-productos">
+                <h2>CALZADO DEPORTIVO</h2>
+
+                <article class="producto">
+                   <img src="https://images.unsplash.com/photo-1542291026-7eec264c27b0?w=600"
+                             alt="Tenis deportivos">
+
+                    <h3>Tenis deportivos</h3>
+                    <p>Calzado para acompañarte en cada actividad.</p>
+                    <p class="precio">$899 MXN</p>
+                    <button class="agregar-carrito"
+        data-nombre="Tenis deportivos"
+        data-precio="899">
+    Agregar al carrito
+</button>
+                </article>
+            </section>
+
+            <!-- CATEGORÍA DE ACCESORIOS -->
+            <section id="accesorios" class="categoria-productos">
+                <h2>ACCESORIOS</h2>
+
+                <article class="producto">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600"
+                         alt="Accesorios para entrenamiento">
+
+                    <h3>Equipo de entrenamiento</h3>
+                    <p>Accesorios para complementar tu actividad física.</p>
+                    <p class="precio">$399 MXN</p>
+                    <button class="agregar-carrito"
+        data-nombre="Equipo de entrenamiento"
+        data-precio="399">
+    Agregar al carrito
+</button>
+                </article>
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>© 2026 Sport Style. Todos los derechos reservados.</p>
+        <p>Tu pasión, nuestro compromiso.</p>
+    </footer>
+<script src="script.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
