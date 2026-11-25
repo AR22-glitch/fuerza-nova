@@ -15,18 +15,18 @@
         <a href="index.html" class="logo">SPORT<span>STYLE</span></a>
 
         <button class="menu-toggle" id="menu-toggle"
-        aria-label="Abrir menú"
-        aria-expanded="false">
-    ☰
-</button>
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            ☰
+        </button>
 
-<nav class="menu" id="menu">
-    <a href="index.html">Inicio</a>
-    <a href="productos.html">Productos</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="carrito.html">Mi carrito</a>
-</nav>
+        <nav class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Mi carrito</a>
+        </nav>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -41,43 +41,60 @@
             </header>
 
             <!-- FORMULARIO -->
-            <form class="formulario" id="formulario-contacto">
+            <form class="formulario"
+                  id="formulario-contacto"
+                  novalidate>
 
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre"
-                       placeholder="Escribe tu nombre" required>
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text"
+                           id="nombre"
+                           name="nombre"
+                           placeholder="Escribe tu nombre">
+                </div>
 
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo"
-                       placeholder="ejemplo@correo.com" required>
-<label for="telefono">Teléfono:</label>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email"
+                           id="correo"
+                           name="correo"
+                           placeholder="ejemplo@correo.com">
+                </div>
 
-<input
-    type="tel"
-    id="telefono"
-    name="telefono"
-    placeholder="Escribe tus 10 dígitos"
-    maxlength="10"
-    required
->
-                <label for="asunto">Motivo de contacto:</label>
-                <select id="asunto" name="asunto" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="productos">Información de productos</option>
-                    <option value="compras">Compras</option>
-                    <option value="servicios">Servicios</option>
-                    <option value="otro">Otro</option>
-                </select>
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel"
+                           id="telefono"
+                           name="telefono"
+                           placeholder="10 dígitos"
+                           maxlength="10"
+                           inputmode="numeric">
+                </div>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje"
-                          rows="6"
-                          placeholder="Escribe tu mensaje aquí..."
-                          required></textarea>
+                <div class="campo">
+                    <label for="asunto">Motivo de contacto</label>
+                    <select id="asunto" name="asunto">
+                        <option value="">Selecciona una opción</option>
+                        <option value="productos">Información de productos</option>
+                        <option value="compras">Compras</option>
+                        <option value="servicios">Servicios</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
 
-                <button type="submit" class="boton">
-                    ENVIAR MENSAJE
-                </button>
+                <div class="campo campo-mensaje">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje"
+                              name="mensaje"
+                              rows="5"
+                              placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <div class="campo campo-boton">
+                    <button type="submit" class="boton">
+                        ENVIAR MENSAJE
+                    </button>
+                </div>
 
             </form>
 
@@ -90,6 +107,8 @@
         <p>© 2026 Sport Style. Todos los derechos reservados.</p>
         <p>Tu pasión, nuestro compromiso.</p>
     </footer>
-<script src="main.js"></script>
+
+    <script src="main.js"></script>
+
 </body>
 </html>
